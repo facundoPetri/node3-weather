@@ -4,6 +4,7 @@ const form = document.querySelector('form')
 const input = document.querySelector('input')
 const p1 = document.querySelector('#m1')
 const p2 = document.querySelector('#m2')
+const img = document.querySelector('img')
 
 form.addEventListener('submit', e => {
     p1.textContent = 'Loading...'
@@ -21,6 +22,7 @@ form.addEventListener('submit', e => {
                 } else {
                     p1.textContent = data.forecast
                     p2.textContent = data.location
+                    img.src = data.icon
                 }
             })
         }
